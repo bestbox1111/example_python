@@ -39,7 +39,7 @@ driver.switch_to.window(driver.window_handles[1])
 driver.close()
 
 
-
+# 깃허브안됨....
 time.sleep(2)
 
 driver.close()
