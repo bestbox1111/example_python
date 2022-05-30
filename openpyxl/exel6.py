@@ -3,6 +3,7 @@ from openpyxl import load_workbook  #엑셀파일 불러오기.
 wb= load_workbook("sample4.xlsx")
 ws = wb.active
 
+#전체 컨셉은 셀의 조건설정 및 수정
 
 # 영어 점수가 80인 학생들에 대해 출력했지만
 for row in ws.iter_rows(min_row=2):

@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 
 
-#전체 컨셉은 수식(데이터 전용)
+#전체 컨셉은 수식(데이터 전용)   -수식이 아닌 실제 데이터 가져오기
 
 wb=load_workbook("sample_formul.xlsx")
 ws= wb.active

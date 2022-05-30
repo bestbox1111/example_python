@@ -3,6 +3,8 @@ from openpyxl import Workbook
 
 wb= Workbook()  #새로운 워크북 생성
 
+#전체 컨셉은 시트생성및 이름 변경 등
+
 ws= wb.create_sheet()   # 기존 시트 옆에다가 새로운 시트를 생성
 ws.title="박준형의 예제연습2"   #sheet이름 변경
 
@@ -12,7 +14,7 @@ ws1 = wb.create_sheet("박준형의 예제연습3") #sheet를 새로 생성하�
 ws2 = wb.create_sheet("박준형의 예제연습--시트중간에 넣기",2)  # 기존 시트옆에다가 생성하는거 말고 원하는 시트옆에 넣을때 인덱스를 인자로 넣어줌.
 
 
-new_ws = wb["박준형의 예제연습3"]   #딕션 형태로 sheet에 접근
+new_ws = wb["박준형의 예제연습3"]   #딕션 형태로 sheet에 접근--시트 생성의방법
 
 # print(wb.sheetnames)    # 현제 활성화 되어 있는 시트 이름들 확인가능.
 

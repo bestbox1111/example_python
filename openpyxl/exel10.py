@@ -21,8 +21,9 @@ line_chart.add_data(bar_value,titles_from_data= True)
 ws.add_chart(line_chart,"N1")
 
 line_chart.title="성적표"
-line_chart.style=20
+line_chart.style=20         #그래프 색깔 설정
 line_chart.y_axis.title= "점수"
 line_chart.x_axis.title= "학생"
+
 
 wb.save("sample4_chart.xlsx")

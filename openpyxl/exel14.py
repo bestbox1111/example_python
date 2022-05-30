@@ -1,13 +1,14 @@
 from openpyxl import load_workbook, Workbook
 
-# wb= Workbook()
-# ws=wb.active
-#전체 컨셉은 셀병합
-# ws.merge_cells("B2:D2")
-# ws["B2"].value="merged cell park"
+wb= Workbook()
+ws=wb.active
 
-# wb.save("sample_cell_merge.xlsx")
+# 전체 컨셉은 셀병합
 
+ws.merge_cells("B2:D2")
+ws["B2"].value="merged cell park"
+
+wb.save("sample_cell_merge.xlsx")
 
 ##
 

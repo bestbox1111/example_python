@@ -28,11 +28,8 @@ print(ws.cell(row=1,column=1).value) #ws["A1"]의 값을 출력
 
 
 
-
-
-
 # 반복문을 이용해서 랜덤 숫자 채우기
-
+ 
 
 for x in range(1,11):
     for y in range(1,11):
@@ -42,4 +39,4 @@ for x in range(1,11):
 wb.save("sample3.xlsx")
 
 
-# 34분까지 완료
+

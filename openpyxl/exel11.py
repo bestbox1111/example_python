@@ -18,15 +18,15 @@ ws.column_dimensions["A"].width = 5    #A열의 너비를 10으로 설정
 ws.row_dimensions[1].height = 35    #A열의 높이를 35으로 설정
 
 a1.font= Font(color="FF0000", bold=True)    #폰트 색상을 빨갱이로, 글자굵기는 굵게로
-b1.font= Font(color="CC33FF", name="Arial", strike=True)    #폰트 색상은 분홍, 글꼴은 아미알, 스트라이크는 취소선임.글자에 짝대기
-c1.font= Font(color="0000FF",size=10, underline="single")   #폰트 색상은 블루, 사이즈는 30, 언더라인은 글자밑에 한줄치기
+b1.font= Font(color="CC33FF", name="Arial", strike=True)    #폰트 색상은 분홍, 글꼴은 아미알, strike는 취소선임.글자에 짝대기
+c1.font= Font(color="0000FF",size=10, underline="single")   #폰트 색상은 블루, 사이즈는 30, 언더라인= 싱글은 글자밑에 한줄치기
 
 #테두리 적용
 
-# thin = Border(left=Side(style="thin"),right=Side(style="thin"),top=Side(style="thin"),bottom=Side(style="thin"))
-# a1.border=thin
-# b1.border=thin
-# c1.border=thin
+thin = Border(left=Side(style="thin"),right=Side(style="thin"),top=Side(style="thin"),bottom=Side(style="thin"))
+a1.border=thin
+b1.border=thin
+c1.border=thin
 
 #셀에 조건 걸어서 확인 하는법
 #90점 넘는 셀에 대해서 초록색으로 적용

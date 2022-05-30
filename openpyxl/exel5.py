@@ -10,11 +10,14 @@ ws= wb.active
 ws.append(["번호","영어","수학"])   #한줄씩 값을 넣을때.
 for i in range(1,11):      
     ws.append([i,randint(0,100),randint(0,100)])
+    
 
 english =ws["B"]    #영어 컬럼만 가지고 오기위해서
 
+
 for cell in english:    #영어 컬럼의 값을 반복문을 통해 가지고오기
     print(cell.value)
+
 
 col_range= ws["B:C"]    #영어와 수학의 컬럼의 값만 가지고 오기
 for cols in col_range:      #B:C의 셀 cols에 저장
@@ -28,7 +31,7 @@ for cell in row_range:      #1번째줄을 cell 에넣기
     print(cell.value)   
 
 
-row_ranges= ws[1:5]    # 여러줄의 row가지고 오기 1 부터5까지
+row_ranges= ws[1:5]    # 여러줄의 row가지고 오기 1 부터 5까지 가지고오기
 for rows in row_ranges:      #row_ranges의 셀을 rows에 넣고
     for cell in rows:       #rows의 값을 cell에 저장함.
         print(cell.value, end=" ")   
@@ -65,22 +68,16 @@ for rows in tuple(ws.rows):
     print(rows[1].value)    #rows에 1번째 있는 값만 확인 하고싶을때
 
 
-
-for rows in ws.iter_rows():
+for rows in ws.iter_rows():     #전체 로우를 가지고 오는것
     print(rows[2].value)    #전체 rows에 2번째 있는 값만 확인 하고싶을때
 
 
-
-
-for columns in ws.iter_cols():
+for columns in ws.iter_cols():      #전체 컬럼을 가직 오는것
     print(columns[0].value)    #전체 column 에 0번째 있는 값만 확인 하고싶을때
-
 
 
 for rows in ws.iter_rows(min_row=2, max_row=5):
     print(rows[2].value)    #전체 rows[2]에 있는 2번째부터 5번째 값만 확인 하고싶을때
-
-
 
 
 
