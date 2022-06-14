@@ -9,8 +9,8 @@ import pyautogui
 
 
 
-locateOnScreen 같은 경우 좌표를 매번확인 할수 없을 경우 이미지로 저장하여
-그이미지를 찾으라는 의미임 (좌,우,이미지넓이, 이미지 높이나옴)
+# locateOnScreen 같은 경우 좌표를 매번확인 할수 없을 경우 이미지로 저장하여
+# 그이미지를 찾으라는 의미임 (좌,우,이미지넓이, 이미지 높이나옴)
 i=pyautogui.locateOnScreen('nn.png')
 q= pyautogui.center(i)
 pyautogui.click()
