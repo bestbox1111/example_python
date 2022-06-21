@@ -99,9 +99,32 @@ browser.find_element(By.XPATH, value="//*[@id='__next']/div/div[1]/div[4]/div/di
 # browser.find_element_by_xpath("//*[@id='__next']/div/div[1]/div[4]/div/div/button").click()
 
 
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
+    
+try:    # try:    #에러가 생기면 바로 종료를 위해 예외처리 구문 넣어줌.
+    #  항공 리스트가 나오기 까지 로딩 시간이 소요 도ㅣ므로 항공 예메 리스트 나올때까지만 기다려 달라는 아래 코드.    
+    element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='__next']/div/div[1]/div[6]/div/div[2]/div[2]")))   #브라우져의  Xpath가 나오기 까지 20초만 기다려줘라라는 의미임.
+    print(element.text)     #가져온 애덜을 텍스르만 출력.
+    """
+    아시아나항공
+    1%적립이벤트혜택     
+    06:50CJJ
+    08:00CJU
+    01시간 10분
+    일반석편도 101,600원~
+    네이버페이 결제시 1%+1,500원 적립
+    편도 99,084원~
+    위의 텍스트로 조건걸어서 디테일 하게 작업할수있음.!!
+    """
+    
+    
+    
+    
+finally:
+    browser.quit()
 
-# 예약세팅은 끝나고, 실제 항공편 리스트가 나옴.(1번째것 일단 출력해봄.)
 
 
