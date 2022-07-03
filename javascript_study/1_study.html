@@ -1,0 +1,80 @@
+
+
+<!-- <script> 포함하는 위치 정하는 법 -->
+
+<!-- 보통 아래와 같이 head안에 포함시키게됨. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="xxxx.js">
+    </script>
+</head>
+<body>
+</body>
+</html> -->
+<!-- 위와 같은 경우 단점이 스크립트를 실행하고 html로 넘어오게되어서 덩어리가 커지면 느림 -->
+
+
+
+<!-- 다음은 아래와 같이  body 맨아래 포함시키는경우. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+<script src="xxxx.js"></script>
+</body>
+</html> -->
+<!-- html이 모두 읽히고 난뒤 js  파일을 실행하다보니 사용자에게 html을 먼저 뛰우지면. -->
+<!-- 위와 같은 경우 단점이 js에 의존적인 페이지의경우에는 느릴수 있음>
+
+
+
+<!-다음은 아래와 같이  스크립트영역에 sync 삽입 시키는경우. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="1_study.js"></script>
+</head>
+<body>
+</body>
+</html> -->
+<!-- 위와 같은 경우 html읽다가 스크립트를 다운시키자는 명력시켜놓고 html마무리 짖고 스크립트로 다시 넘어가는 구조>
+
+
+
+
+<!-다음은 아래와 같이  스크립트영역에 defer 삽입 시키는경우. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="1_study.js">
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+<!-- 위와 같은 경우 html읽다가 스크립트를 다운하자는 명령해놓고 html구조 읽음...aync랑 차이점이 햇갈리네.>
+
+    
+<!- 차이점을 말하면 aync 경우 a,b,c 스크립트를 다운로드 할시 순서 상과없이  먼저 다운로드된 순서대로 작업됨. -->
+<!-- defer 는 모든 스크립트 파일 다운로드 완료 후 실행되어 가장 안정적임. -->
